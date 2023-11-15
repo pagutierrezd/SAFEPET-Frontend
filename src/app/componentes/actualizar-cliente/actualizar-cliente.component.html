@@ -1,0 +1,29 @@
+<div>
+    <!-- nombre-del-componente.component.html -->
+
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <div class="form-group">
+      <label for="cedula">Cédula:</label>
+      <input type="text" id="cedula" name="cedula" [(ngModel)]="userData.cedula" required>
+    </div>
+
+
+    <div class="form-group">
+      <label for="telefono">Teléfono:</label>
+      <input type="text" id="telefono" name="telefono" [(ngModel)]="userData.telefono" required>
+    </div>
+  
+    <div class="form-group">
+      <label for="correo">Correo:</label>
+      <input type="email" id="correo" name="correo" [(ngModel)]="userData.correo">
+    </div>
+  
+    <div class="form-group">
+      <label for="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" [(ngModel)]="userData.direccion" required>
+    </div>
+  
+    <button type="submit" [disabled]="userForm.invalid">Actualizar cliente</button>
+  </form>
+  
+</div>

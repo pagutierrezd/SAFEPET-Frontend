@@ -1,0 +1,37 @@
+
+<h2>Listado de Clientes</h2>
+
+<div class="filter">
+  <label for="filtroCedula">Buscar cliente por identificación</label>
+  <input type="text" id="filtroCedula" [(ngModel)]="filtroCedula" >
+  <button class="filter-btn" (click)="filtrarClientes()">Buscar</button>
+</div>
+
+<div *ngIf="clientes && clientes.length > 0">
+  <table class="customer-list">
+    <thead>
+      <tr>
+        <th>Cédula</th>
+        <th>Nombre</th>
+        <th>Teléfono</th>
+        <th>Dirección</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cliente of clientes">
+        <td>{{ cliente.cedula }}</td>
+        <td>{{ cliente.nombre }}</td>
+        <td>{{ cliente.telefono }}</td>
+        <td>{{ cliente.direccion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<div *ngIf="clientes && clientes.length === 0" class="empty-message">
+  <p>No hay clientes registrados.</p>
+</div>
+
+<div *ngIf="!clientes" class="loading-message">
+  <p>Cargando clientes...</p>
+</div>
