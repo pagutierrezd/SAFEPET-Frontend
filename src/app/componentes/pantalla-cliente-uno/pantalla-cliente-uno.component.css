@@ -1,0 +1,30 @@
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.left-side {
+  flex: 1;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  width: 50%;
+}
+
+.button {
+  margin-top: 10px;
+}
+
+.button:first-child {
+  margin-top: 0;
+}

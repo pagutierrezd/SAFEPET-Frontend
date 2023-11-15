@@ -1,34 +1,31 @@
-/* navbar.component.css */
+/* app.component.css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #333;
+  padding: 10px;
+}
 
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
-    background-color: #333;
-    color: white;
-  }
-  
-  .logo img {
-    width: 40px;
-    height: 40px;
-    margin-right: 10px;
-  }
-  
-  .logo span {
-    font-size: 18px;
-  }
-  
-  .botones button {
-    margin-left: 10px;
-    padding: 8px 12px;
-    background-color: #555;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .botones button:hover {
-    background-color: #777;
-  }
-  
+.header-right nav {
+  display: flex;
+  justify-content: flex-end;
+}
+
+nav a {
+  color: #fff;
+  margin-left: 10px;
+  text-decoration: none;
+  cursor: pointer; /* Add cursor property to change the cursor */
+}
+
+nav a:hover {
+  color: #ff5500;
+}
+
+.page-name {
+  color: #fff;
+  margin: 0;
+}
+
+/* Insert any additional CSS style as needed */

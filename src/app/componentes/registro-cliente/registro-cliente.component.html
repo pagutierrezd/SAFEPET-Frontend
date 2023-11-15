@@ -1,9 +1,4 @@
-<html>
-<head>
-  <title>Registro</title>
-  
-</head>
-<body>
+<div class="all">
   <div class="container">
     <h2>Registro</h2>
     <span>Ingrese su información personal para realizar el registro:</span>
@@ -14,9 +9,8 @@
       <input type="text" id="correo" name="correo" placeholder="correo electrónico" [(ngModel)]="userData.correo" required>
       <input type="text" id="direccion" name="direccion" placeholder="dirección" [(ngModel)]="userData.direccion" required>
       <input type="password" id="password" name="password" placeholder="contraseña" [(ngModel)]="userData.password" required>
-      
+
       <input type="submit" value="Registrarse">
     </form>
   </div>
-</body>
-</html>
+</div>

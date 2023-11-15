@@ -1,19 +1,17 @@
-<!-- navbar.component.html -->
 
-<div class="navbar">
-    <div class="logo">
-      <img src="ruta-al-logo.png" alt="Logo" />
-      <span>Nombre de la Aplicación</span>
-    </div>
-    <div class="botones">
-      <button >Inicio</button>
-      <button >Productos</button>
-
-      <button>Login</button>
-      <button >Registrarme</button>
-
-
-    </div>
+<header>
+  <div class="header-left">
+    <p class="page-name">Veterinaria SAFEPET</p>
   </div>
-  
-<app-listar-clientes></app-listar-clientes>
+  <div class="header-right">
+    <nav>
+      <a routerLink="/login" *ngIf="!isLoggedIn">Login</a>
+      <a routerLink="/registro" *ngIf="!isLoggedIn">Registro</a>
+      <a routerLink="/principal/actualizarcliente" *ngIf="isLoggedIn">Actualizar Cliente</a>
+      <a routerLink="/principal/listarclientes" *ngIf="isLoggedIn">Listar Clientes</a>
+      <a routerLink="/principal/listarclientes" *ngIf="isLoggedIn">Cerrar sesión</a>
+
+    </nav>
+  </div>
+</header>
+<router-outlet></router-outlet>

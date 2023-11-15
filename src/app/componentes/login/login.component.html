@@ -1,18 +1,13 @@
-<html>
-<head>
-  <title>Login</title>
-  
-</head>
-<body>
-  <div class="container">
+
+ <div class="all">
+ <div class="container">
     <h2>Login</h2>
     <span>Ingrese su información iniciar sesión:</span>
-    <form name="registrationForm" (ngSubmit)="onSubmit()" #userForm="ngForm">
+    <form name="registrationForm" (ngSubmit)="login()" #userForm="ngForm">
       <input type="text" id="correo" name="correo" placeholder="correo electrónico" [(ngModel)]="userData.email" required>
       <input type="password" id="password" name="password" placeholder="contraseña" [(ngModel)]="userData.password" required>
-      
+
       <input type="submit" value="Iniciar sesión">
     </form>
   </div>
-</body>
-</html>
+</div>

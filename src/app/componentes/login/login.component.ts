@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { Login } from 'src/app/modelo/Login.model';
+import { AuthService } from 'src/app/services/auth.service';
 import { ClienteService } from 'src/app/services/cliente.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,18 +12,14 @@ import { ClienteService } from 'src/app/services/cliente.service';
 export class LoginComponent {
   userData: Login = { email: '', password: '' };
 
-  constructor(private clienteService: ClienteService) {}
+  constructor(private clienteService: ClienteService, private authService: AuthService, private router: Router) {}
 
-  public onSubmit():void {
-     // Aquí puedes llamara al servicio para enviar los datos al servidor
+  login():void {
       this.clienteService.login(this.userData).subscribe(
       response => {
         console.log('Login exitoso:', response);
-        // Puedes realizar otras acciones después del registro exitoso
-      },
-      error => {
-        console.error('No está registrado en nuestra página:', error);
-        // Puedes manejar errores aquí, por ejemplo, mostrar un mensaje de error al usuario
+        this.authService.login();
+        this.router.navigate(['/pantalla-cliente-uno']);
       }
     );
 

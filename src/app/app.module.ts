@@ -10,6 +10,7 @@ import { RegistroClienteComponent } from './componentes/registro-cliente/registr
 import { ActualizarClienteComponent } from './componentes/actualizar-cliente/actualizar-cliente.component';
 import { ListarClientesComponent } from './componentes/listar-clientes/listar-clientes.component';
 import { LoginComponent } from './componentes/login/login.component';
+import { PantallaClienteUnoComponent } from './componentes/pantalla-cliente-uno/pantalla-cliente-uno.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +18,8 @@ import { LoginComponent } from './componentes/login/login.component';
     RegistroClienteComponent,
     ActualizarClienteComponent,
     ListarClientesComponent,
-    LoginComponent
+    LoginComponent,
+    PantallaClienteUnoComponent,
   ],
   imports: [
     BrowserModule,
