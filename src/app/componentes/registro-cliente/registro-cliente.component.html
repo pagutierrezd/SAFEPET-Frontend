@@ -1,38 +1,22 @@
-<div>
-    <!-- nombre-del-componente.component.html -->
-
-<form (ngSubmit)="onSubmit()" #userForm="ngForm">
-    <div class="form-group">
-      <label for="cedula">Cédula:</label>
-      <input type="text" id="cedula" name="cedula" [(ngModel)]="userData.cedula" required>
-    </div>
+<html>
+<head>
+  <title>Registro</title>
   
-    <div class="form-group">
-      <label for="password">Contraseña:</label>
-      <input type="password" id="password" name="password" [(ngModel)]="userData.password" required>
-    </div>
-  
-    <div class="form-group">
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" name="nombre" [(ngModel)]="userData.nombre" required>
-    </div>
-  
-    <div class="form-group">
-      <label for="telefono">Teléfono:</label>
-      <input type="text" id="telefono" name="telefono" [(ngModel)]="userData.telefono" required>
-    </div>
-  
-    <div class="form-group">
-      <label for="correo">Correo:</label>
-      <input type="email" id="correo" name="correo" [(ngModel)]="userData.correo">
-    </div>
-  
-    <div class="form-group">
-      <label for="direccion">Dirección:</label>
-      <input type="text" id="direccion" name="direccion" [(ngModel)]="userData.direccion" required>
-    </div>
-  
-    <button type="submit" [disabled]="userForm.invalid">Registrar</button>
-  </form>
-  
-</div>
+</head>
+<body>
+  <div class="container">
+    <h2>Registro</h2>
+    <span>Ingrese su información personal para realizar el registro:</span>
+    <form name="registrationForm" (ngSubmit)="onSubmit()" #userForm="ngForm">
+      <input type="text" id="cedula" name="cedula" placeholder="cedula" [(ngModel)]="userData.cedula" required>
+      <input type="text" id="nombre" name="nombre" placeholder="nombre" [(ngModel)]="userData.nombre" required>
+      <input type="tel" id="telefono" name="telefono" placeholder="teléfono" [(ngModel)]="userData.telefono" required>
+      <input type="text" id="correo" name="correo" placeholder="correo electrónico" [(ngModel)]="userData.correo" required>
+      <input type="text" id="direccion" name="direccion" placeholder="dirección" [(ngModel)]="userData.direccion" required>
+      <input type="password" id="password" name="password" placeholder="contraseña" [(ngModel)]="userData.password" required>
+      
+      <input type="submit" value="Registrarse">
+    </form>
+  </div>
+</body>
+</html>

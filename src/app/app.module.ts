@@ -8,12 +8,16 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { RegistroClienteComponent } from './componentes/registro-cliente/registro-cliente.component';
 import { ActualizarClienteComponent } from './componentes/actualizar-cliente/actualizar-cliente.component';
+import { ListarClientesComponent } from './componentes/listar-clientes/listar-clientes.component';
+import { LoginComponent } from './componentes/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     RegistroClienteComponent,
-    ActualizarClienteComponent
+    ActualizarClienteComponent,
+    ListarClientesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
